@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
 
     await db.set(
       `afkSebep_${message.author.id}_${message.guild.id}`,
-      "Sebep girilmemiş o_O"
+      "Sebep girilmemiş."
     );
     await db.set(
       `afkid_${message.author.id}_${message.guild.id}`,
@@ -27,12 +27,12 @@ exports.run = async (client, message, args) => {
     const bafk = new Discord.MessageEmbed()
     .setAuthor(message.author.tag)
     .setColor("GREEN")
-    .setDescription(`Başarıyla AFK oldun, a-ama özlettirme kendini, t-tamam mı :')`)
+    .setDescription(`Başarıyla AFK oldun.')`)
     .addField(`Sebep:`,`${a}`)
     .setThumbnail("https://s3.gifyu.com/images/Logodd5bd5976845c883.gif")
 
     message.inlineReply(bafk).then(msg => msg.delete({timeout: 5000}));
-    if(message.author.id !== "779226623505334283"){
+    if(message.author.id !== "id"){
       message.member.setNickname(`[AFK] ` + b);
       return;
     } 
@@ -55,13 +55,13 @@ exports.run = async (client, message, args) => {
     const bafk2 = new Discord.MessageEmbed()
     .setAuthor(message.author.tag)
     .setColor("GREEN")
-    .setDescription(`Başarıyla AFK oldun, a-ama özlettirme kendini, t-tamam mı :')`)
+    .setDescription(`Başarıyla AFK oldun.')`)
     .addField(`Sebep:`,`${a}`)
     .setThumbnail("https://s3.gifyu.com/images/Logodd5bd5976845c883.gif")
 
     message.inlineReply(bafk2).then(msg => msg.delete({timeout: 5000}));
 
-    if(message.author.id !== "779226623505334283"){
+    if(message.author.id !== "id"){
       message.member.setNickname(`[AFK] ` + b);
       return;
     } 
